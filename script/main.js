@@ -25,6 +25,8 @@
       newSubImg.classList.add('thumb');
       // add a source
       newSubImg.src = "images/" + objectIndex.images[index];
+      newSubImg.dataset.index = index;
+      newSubImg.addEventListener('click', function() { popLightbox(index, objectIndex); }, false);
       // add it to the page
       subImages.appendChild(newSubImg);
 
@@ -51,12 +53,29 @@
     element.addEventListener('click', changeElements, false);
   });
 
-  // theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
-  // theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
-  // theHeading.classList.add('spring');
+  function popLightbox(currentIndex, currentObject) {
+		let lightbox = document.querySelector('.lightbox');
+		lightbox.style.display = "block";
+		window.scrollTo(0,0);
+
+		let lightboxImage = lightbox.querySelector('img');
+
+		lightboxImage.src = "images/" + currentObject.images[currentIndex];
+    let lightboxClose = lightbox.querySelector('.CloseLightbox');
+
+    if(lightboxClose){
+    lightboxClose.addEventListener('click', closelightbox ,false);
+    }
+	}
+
+  function closelightbox(){
+Document.lightbox.style.display = 'none';
+}
+
+   theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
+   theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
+   theHeading.classList.add('spring');
 
   //document.querySelector('#spring').click();
 
-  // more programmy-type way to do the same thing
-  changeElements.call(document.querySelector('#spring'));
 })();

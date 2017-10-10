@@ -54,8 +54,9 @@ var dynamicContent = {
 				"winter_2.jpg",
 				"winter_3.jpg",
 				"winter_4.jpg",
-				"winter_5.jpeg",
+				"winter_5.jpg",
 				"winter_6.jpg"
+
 			]
 		}
 	};
