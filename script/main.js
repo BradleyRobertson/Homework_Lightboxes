@@ -54,28 +54,38 @@
   });
 
   function popLightbox(currentIndex, currentObject) {
-		let lightbox = document.querySelector('.lightbox');
-		lightbox.style.display = "block";
+	let lightbox = document.querySelector('.lightbox');
+	let lightboxImg = lightbox.querySelector('img');
+  let lightboxDesc = lightbox.querySelector('p');
+  let lightboxClose = lightbox.querySelector('.close-lightbox');
+
 		window.scrollTo(0,0);
+    document.body.style.overflow = "hidden";
 
-		let lightboxImage = lightbox.querySelector('img');
 
-		lightboxImage.src = "images/" + currentObject.images[currentIndex];
-    let lightboxClose = lightbox.querySelector('.CloseLightbox');
-
-    if(lightboxClose){
-    lightboxClose.addEventListener('click', closelightbox ,false);
-    }
+		lightboxImg.src = "images/" + currentObject.images[currentIndex];
+    lightboxDesc.innerHTML = currentObject.imageDescription[currentIndex];
+	   lightbox.style.display = "block";
+    lightboxClose.addEventListener('click', closeLightbox ,false);
 	}
 
-  function closelightbox(){
-Document.lightbox.style.display = 'none';
+  function closeLightbox(){
+    let lightbox = document.querySelector('.lightbox');
+    	let lightboxImg = lightbox.querySelector('img');
+        let lightboxClose = lightbox.querySelector('.close-lightbox');
+        let lightboxDesc = lightbox.querySelector('p');
+  lightbox.style.display = "none";
+  document.body.style.overflow = "visible";
+  lightboxImg.src = "";
+  lightboxDesc.innerHTML = "";
+      lightboxClose.removeEventListener('click', closeLightbox ,false);
 }
 
-   theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
-   theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
-   theHeading.classList.add('spring');
+  //theSubhead.firstChild.nodeValue = dynamicContent['spring'].headline;
+//theSeasonText.firstChild.nodeValue = dynamicContent['spring'].text;
+//  theHeading.classList.add('spring');
 
   //document.querySelector('#spring').click();
+  changeElements.call(document.querySelector('#spring'));
 
 })();

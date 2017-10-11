@@ -22,13 +22,37 @@ section, article, .subImagesContainer { position: relative; width: 635px; margin
 
 .lightbox
 {
-position: fixed;
+position: absolute;
 left: 0;
-right: 0;
+width: 100%;
 top: 0;
-bottom: 0;
+height: 100%;
 Background-color:rgba(0,0,0,0.5);
 display: none;
+z-index: 5000;
+}
+
+.lightbox-img
+{
+display: block;
+margin-top: 19%;
+margin: auto;
+
+}
+
+.close-lightbox
+{
+	float: right;
+	margin-right: 18px;
+	margin-top: 12px;
+	font-size: 2em;
+	cursor: pointer;
+}
+
+.lightbox-desc
+{
+	text-align: center;
+	Font-size: 18px;
 }
 
 
