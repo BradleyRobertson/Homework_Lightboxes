@@ -14,12 +14,12 @@ var dynamicContent = {
 			],
 
 			imageDescription : [
-				'stuff',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain'
+				'Spring butterflies',
+				'Spring ducklings',
+				'Spring flowers',
+				'Vibrant Flowers',
+				'A single daisy',
+				'Floral Rows'
 			]
 		},
 
@@ -38,12 +38,12 @@ var dynamicContent = {
 			],
 
 			imageDescription : [
-				'stuff',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain'
+				'Summer Beach',
+				'Dog',
+				'Summer fields',
+				'Sunflower',
+				'The blue beach',
+				'Sunglasses'
 			]
 
 		},
@@ -63,12 +63,12 @@ var dynamicContent = {
 			],
 
 			imageDescription : [
-				'stuff',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain'
+				'Autumn roads',
+				'Pumpkins',
+				'Fall Traintracks',
+				'Fall street',
+				'Autumn Leaves',
+				'The long road'
 			]
 
 		},
@@ -88,12 +88,12 @@ var dynamicContent = {
 			],
 
 			imageDescription : [
-				'stuff',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain',
-				'stuffagain'
+				'Winter sunlight',
+				'Snowman',
+				'Winter road',
+				'Winter tree',
+				'Winter appearel',
+				'Winter Walkway'
 			]
 
 		}
